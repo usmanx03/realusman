@@ -1,126 +1,171 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Usman Zahid, Backend Engineer</title>
-    <meta name="description" content="Backend engineer focused on building clear, fast, and lasting systems that solve real problems.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            max-width: 700px;
-            margin: 0 auto;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.75;
-            word-spacing: 0.04em;
-            letter-spacing: 0.01em;
-            padding: 50px 20px;
-            font-size: 1.07rem;
-            color: #222;
-        }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        header, main, footer {
-            margin-bottom: 2.5rem;
-        }
+    <title>Usman Zahid — Backend Engineer</title>
 
-        img {
-            border-radius: 10px;
-            display: block;
-            margin-bottom: 1.5rem;
-        }
+    <meta name="description" content="Backend engineer focused on systems, deployments, and infrastructure." />
 
-        h1 {
-            margin: 0.5rem 0 0.5rem 0;
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.5rem 0 1.5rem 0;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #0044cc;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            margin: 2rem 0 1rem 0;
-            font-size: 1.35rem;
-            font-weight: 500;
-        }
-
-        p {
-            margin-bottom: 1.3rem;
-        }
-
-        footer {
-            font-size: 0.9rem;
-            color: #555;
-            text-align: center;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-    <img src="usman_avatar_x.png" alt="Usman Zahid" width="200" height="200">
-    <h1>Usman Zahid</h1>
-    <nav>
-        <ul>
-            <li><a target="_blank" href="mailto:usmanzahidx03@gmail.com">Email</a></li>
-            <li><a target="_blank" href="https://github.com/usmanzahidcode">GitHub</a></li>
-            <li><a target="_blank" href="https://x.com/UsmanZ_">X</a></li>
-            <li><a target="_blank" href="https://dev.to/usmanzahidcode">Blog</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/usmanzahidx03">LinkedIn</a></li>
-        </ul>
-    </nav>
-    <p>
-        Backend engineer who enjoys building, solving, and shipping reliable systems. I focus on clarity, speed, and creating foundations that products can grow
-        on without losing stability.
-    </p>
+
+<body class="min-h-screen bg-[#070a13] text-[#e2e8f0]/80 font-[Manrope]">
+
+<!-- HERO -->
+<header class="relative pt-20 md:pt-28 overflow-hidden select-none">
+
+    <!-- BACKGROUND NAME -->
+    <div class="text-[12vw] font-extrabold tracking-tighter text-[#1e293b]/20 uppercase text-center leading-none whitespace-nowrap font-[Inter]">
+        usman zahid
+    </div>
+
+    <div class="relative -mt-12 md:-mt-20 max-w-4xl mx-auto px-6">
+
+        <h1 class="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
+            Backend engineer building  <br>
+            <span id="hero-typing-title" class="text-cyan-400 border-r-2 border-cyan-400/60 pr-1 italic">
+          APIs.
+        </span>
+        </h1>
+
+        <p class="mt-6 text-sm md:text-base text-slate-400 leading-relaxed max-w-2xl">
+            I design backend services, manage deployments, and work close to infrastructure.
+            The focus is on systems that behave consistently in production and remain operable over time.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-6 text-sm text-slate-300">
+            <a class="hover:text-cyan-400" href="mailto:usmanzahidx03@gmail.com">Email</a>
+            <a class="hover:text-cyan-400" href="https://github.com/usmanzahidcode">GitHub</a>
+            <a class="hover:text-cyan-400" href="https://x.com/UsmanZ_">X</a>
+            <a class="hover:text-cyan-400" href="https://dev.to/">Blog</a>
+            <a class="hover:text-cyan-400" href="https://linkedin.com">LinkedIn</a>
+        </div>
+    </div>
 </header>
 
-<main>
-    <section>
-        <h2>About</h2>
-        <p>
-            I believe in systems that serve people, not the other way around. My approach is to take complex requirements and shape them into solutions that are
-            lean, understandable, and resilient. Good engineering is about removing friction and making room for progress.
-        </p>
-        <p>
-            I care about balance, building only what is needed, but doing it with enough depth that it lasts. I like solving problems at the point where
-            business
-            goals and technical execution meet, making sure what gets built actually moves things forward.
-        </p>
-        <p>
-            Most of my work lives in backend infrastructure, connecting APIs, databases, and cloud services into one dependable whole. The goal is always the
-            same, systems that teams can rely on and scale without hesitation.
-        </p>
+<!-- CONTENT (RESTORED BALANCED SPACING) -->
+<main class="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-20">
+
+    <!-- SYSTEMS -->
+    <section class="space-y-6">
+        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
+            Systems
+        </h2>
+
+        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
+            <p>
+                I build backend systems for production environments, where reliability and structure matter more than initial implementation speed.
+                Work typically spans APIs, service design, and data flow between components.
+            </p>
+
+            <p>
+                These systems are designed to remain stable under real usage, including handling retries, failures, and consistency across distributed components.
+            </p>
+        </div>
     </section>
 
-    <section>
-        <h2>Now</h2>
-        <p>
-            I’m drawn to opportunities where I can design backend systems, connect parts into full solutions, and support products through growth. The real
-            reward is transforming complex challenges into clear, dependable systems that last.
-        </p>
+    <!-- DEPLOYMENTS -->
+    <section class="space-y-6">
+        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
+            Deployments
+        </h2>
+
+        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
+            <p>
+                I work on deployment pipelines, containerized services, and server-side configuration for production systems.
+            </p>
+
+            <p>
+                Focus is on predictable deployments, repeatable environments, and reducing risk during releases.
+                I also introduce automation where operational steps become repetitive or error-prone.
+            </p>
+        </div>
     </section>
+
+    <!-- INFRASTRUCTURE -->
+    <section class="space-y-6">
+        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
+            Infrastructure
+        </h2>
+
+        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
+            <p>
+                I work with servers, runtime environments, and system setups when required.
+                This includes service hosting, environment configuration, and operational debugging.
+            </p>
+
+            <p>
+                This exposure helps in designing backend systems that are practical to deploy and maintain outside development environments.
+            </p>
+        </div>
+    </section>
+
 </main>
 
-<footer>
-    <p>
-        This page is intentionally simple, fast to load and clear to read, the same way I aim to build systems, practical, scalable, and made to last.
+<!-- FOOTER (balanced + not generic) -->
+<footer class="max-w-4xl mx-auto px-6 pb-14 border-t border-slate-800 pt-8">
+    <p class="text-xs text-slate-500 leading-relaxed">
+        I build backend services and operate systems that run continuously, with attention to deployment stability and long-term maintainability.
     </p>
 </footer>
+
+<!-- TYPING (RESTORED ORIGINAL LOGIC + EXPANDED WORD SET) -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const typingElement = document.getElementById('hero-typing-title');
+        if (!typingElement) return;
+
+        const phrases = [
+            "backend systems.",
+            "services.",
+            "databases.",
+            "servers.",
+            "deployments.",
+            "infrastructure.",
+            "automations.",
+            "architecture.",
+            "production systems.",
+            "APIs."
+        ];
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 85;
+
+        const typeLoop = () => {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 45;
+            } else {
+                typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 85;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2200;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 350;
+            }
+
+            setTimeout(typeLoop, typeSpeed);
+        };
+
+        typeLoop();
+    });
+</script>
+
 </body>
 </html>
