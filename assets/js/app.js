@@ -15,6 +15,7 @@ const COMMANDS = {
   skills: { desc: 'tech stack and tooling I work with',             usage: 'skills'             },
   clear:  { desc: 'clear the terminal screen',                      usage: 'clear'              },
   echo:   { desc: 'print text back',                                usage: 'echo [text]'        },
+  web:    { desc: 'go back to the main website',                    usage: 'web'                },
 };
 
 // ── BOOT SEQUENCE ───────────────────────────────────────────────────────────
@@ -211,6 +212,13 @@ function runClear() {
   output.innerHTML = '';
 }
 
+function runWeb() {
+  appendBlank();
+  appendLine('line', 'Navigating to the web version …');
+  appendBlank();
+  setTimeout(() => { window.location.href = 'index.html'; }, 600);
+}
+
 function runUnknown(cmd) {
   appendBlank();
   appendLine('line-error', `bash: ${cmd}: command not found`);
@@ -236,6 +244,7 @@ function dispatch(raw) {
     case 'social': runSocial(args);  break;
     case 'echo':   runEcho(args);    break;
     case 'clear':  runClear();       break;
+    case 'web':    runWeb();         break;
     default:       runUnknown(cmd);  break;
   }
 }
