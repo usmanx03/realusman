@@ -1,120 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-zinc-950">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <title>Usman Zahid — Backend Engineer</title>
-
-    <meta name="description" content="Backend engineer focused on systems, deployments, and infrastructure."/>
-
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <script type="module" crossorigin src="./assets/index-QrSSgvEZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CU3KSKmq.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Usman Zahid</title>
+  <meta name="description" content="Backend engineer. I build APIs, servers, and production systems — full solutions, not just code."/>
+  <link rel="stylesheet" crossorigin href="./assets/main-BTtuxlNh.css">
 </head>
+<body class="bg-zinc-950 text-zinc-300 font-sans antialiased">
 
-<body class="min-h-screen bg-[#070a13] text-[#e2e8f0]/80 font-[Manrope]">
+  <!-- NAV -->
+  <nav class="max-w-4xl mx-auto px-8 pt-8 flex justify-between items-center">
+    <span class="text-zinc-100 font-semibold tracking-tight">Usman Zahid</span>
 
-<!-- HERO -->
-<header class="relative pt-20 md:pt-28 overflow-hidden select-none">
-
-    <!-- BACKGROUND NAME -->
-    <div class="text-[12vw] font-extrabold tracking-tighter text-[#1e293b]/20 uppercase text-center leading-none whitespace-nowrap font-[Inter]">
-        usman zahid
+    <!-- Terminal button with tooltip -->
+    <div class="relative group">
+      <a href="terminal.html"
+         class="font-mono text-xs text-cyan-400 border border-cyan-400/60 px-3 py-1.5 rounded hover:bg-cyan-400 hover:text-zinc-950 hover:border-cyan-400 transition-all duration-150">
+        ~/terminal
+      </a>
+      <div class="pointer-events-none absolute right-0 top-full mt-2 w-52 bg-zinc-900 border border-zinc-700 rounded px-3 py-2 text-xs text-zinc-400 leading-snug opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
+        For those who live in the terminal. You know who you are.
+      </div>
     </div>
+  </nav>
 
-    <div class="relative -mt-12 md:-mt-20 max-w-4xl mx-auto px-6">
+  <!-- MAIN -->
+  <main class="max-w-4xl mx-auto px-8 pt-16 pb-28">
 
-        <h1 class="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
-            Backend engineer building <br>
-            <span id="hero-typing-title" class="text-cyan-400 border-r-2 border-cyan-400/60 pr-1 italic">
-          APIs.
-        </span>
-        </h1>
+    <!-- HERO -->
+    <div class="pb-14 border-b border-zinc-800/60 mb-14">
 
-        <p class="mt-6 text-sm md:text-base text-slate-400 leading-relaxed max-w-2xl">
-            I design backend services, manage deployments, and work close to infrastructure.
-            The focus is on systems that behave consistently in production and remain operable over time.
+      <p class="font-mono text-xs text-cyan-500 mb-4 tracking-widest uppercase">Backend Engineer · Pakistan</p>
+
+      <h1 class="text-5xl sm:text-6xl font-bold text-zinc-100 tracking-tight leading-[1.1] mb-7">
+        I build systems<br>that stay up.
+      </h1>
+
+      <div class="max-w-xl space-y-4 text-[17px] leading-relaxed text-zinc-400">
+        <p>
+          Usman Zahid. I build production systems from scratch: APIs, servers, deployments,
+          and the infrastructure underneath them.
         </p>
+        <p>
+          I do not just write code for a ticket. I understand the problem, design the system,
+          ship it, and keep it running. Full solutions, not just a pair of hands.
+        </p>
+      </div>
 
-        <div class="mt-7 flex flex-wrap gap-6 text-sm text-slate-300">
-            <a class="hover:text-cyan-400" href="mailto:usmanzahidx03@gmail.com">Email</a>
-            <a class="hover:text-cyan-400" href="https://github.com/usmanzahidcode">GitHub</a>
-            <a class="hover:text-cyan-400" href="https://x.com/UsmanZ_">X</a>
-            <a class="hover:text-cyan-400" href="https://dev.to/">Blog</a>
-            <a class="hover:text-cyan-400" href="https://linkedin.com">LinkedIn</a>
-        </div>
+      <div class="flex flex-wrap gap-x-7 gap-y-2 mt-8 text-sm text-zinc-500">
+        <a href="https://github.com/usmanzahidx03" target="_blank" rel="noopener"
+           class="hover:text-zinc-100 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/usmanzahidx03" target="_blank" rel="noopener"
+           class="hover:text-zinc-100 transition-colors">LinkedIn</a>
+        <a href="https://x.com/UsmanZ_" target="_blank" rel="noopener"
+           class="hover:text-zinc-100 transition-colors">X</a>
+        <a href="mailto:usmanzahidx03@gmail.com"
+           class="hover:text-zinc-100 transition-colors">usmanzahidx03@gmail.com</a>
+      </div>
     </div>
-</header>
 
-<!-- CONTENT (RESTORED BALANCED SPACING) -->
-<main class="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-20">
+    <!-- CONTENT GRID: wide two-col feel on desktop -->
+    <div class="space-y-14">
 
-    <!-- SYSTEMS -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Systems
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I build backend systems for production environments, where reliability and structure matter more than initial implementation speed.
-                Work typically spans APIs, service design, and data flow between components.
-            </p>
-
-            <p>
-                These systems are designed to remain stable under real usage, including handling retries, failures, and consistency across distributed
-                components.
-            </p>
+      <!-- WHAT I DO -->
+      <section class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-12 pb-14 border-b border-zinc-800/60">
+        <h2 class="text-sm font-semibold text-zinc-100 pt-0.5 shrink-0">What I do</h2>
+        <div class="space-y-4 text-zinc-400 leading-relaxed">
+          <p>
+            I build backend systems that handle real traffic, survive incidents, and stay
+            maintainable long after launch. That means API design, service architecture,
+            and the data pipelines connecting them.
+          </p>
+          <p>
+            I own deployments too. Containerising services, writing pipelines, configuring
+            servers, making sure a release is a non-event. Predictable over heroic.
+          </p>
+          <p>
+            When a project calls for it, I extend into the frontend. Enough to ship a complete
+            product, not just hand off a JSON response and consider the job done.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- DEPLOYMENTS -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Deployments
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I work on deployment pipelines, containerized services, and server-side configuration for production systems.
-            </p>
-
-            <p>
-                Focus is on predictable deployments, repeatable environments, and reducing risk during releases.
-                I also introduce automation where operational steps become repetitive or error-prone.
-            </p>
+      <!-- HOW I THINK -->
+      <section class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-12 pb-14 border-b border-zinc-800/60">
+        <h2 class="text-sm font-semibold text-zinc-100 pt-0.5 shrink-0">How I think</h2>
+        <div class="space-y-4 text-zinc-400 leading-relaxed">
+          <p>
+            Good backend work is invisible. The API responds fast, the data is consistent,
+            the service recovers from failure without waking anyone up. That is the target.
+          </p>
+          <p>
+            I think in systems: how components interact, where bottlenecks form, what breaks
+            under load. If something is hard to debug in production, it is not finished yet.
+          </p>
+          <p>
+            I reach for boring technology that works rather than clever technology that
+            surprises. One well-understood solution beats five that each handle a piece of the problem.
+          </p>
         </div>
-    </section>
+      </section>
 
-    <!-- INFRASTRUCTURE -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Infrastructure
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I work with servers, runtime environments, and system setups when required.
-                This includes service hosting, environment configuration, and operational debugging.
-            </p>
-
-            <p>
-                This exposure helps in designing backend systems that are practical to deploy and maintain outside development environments.
-            </p>
+      <!-- STACK -->
+      <section class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-12 pb-14 border-b border-zinc-800/60">
+        <h2 class="text-sm font-semibold text-zinc-100 pt-0.5 shrink-0">Stack</h2>
+        <div>
+          <p class="text-zinc-400 leading-relaxed mb-6">The tools change with the job. These are the ones I reach for most.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">PHP</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Laravel</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Python</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">FastAPI</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">JavaScript</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">.NET</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">PostgreSQL</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">MySQL</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Redis</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">MongoDB</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Docker</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Nginx</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Linux</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">GitHub Actions</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">Hetzner</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">DigitalOcean</span>
+            <span class="font-mono text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded">AWS</span>
+          </div>
         </div>
-    </section>
+      </section>
 
-</main>
+      <!-- CURRENTLY -->
+      <section class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-12">
+        <h2 class="text-sm font-semibold text-zinc-100 pt-0.5 shrink-0">Currently</h2>
+        <div class="space-y-4 text-zinc-400 leading-relaxed">
+          <p>
+            Open to backend engineering roles and consulting work, particularly systems that
+            need serious production thinking, not just feature velocity.
+          </p>
+          <p>
+            If you are building something real and need an engineer who can own the backend
+            end to end, <a href="mailto:usmanzahidx03@gmail.com"
+            class="text-blue-400 hover:text-blue-300 transition-colors">reach out</a>.
+          </p>
+        </div>
+      </section>
 
-<!-- FOOTER (balanced + not generic) -->
-<footer class="max-w-4xl mx-auto px-6 pb-14 border-t border-slate-800 pt-8">
-    <p class="text-xs text-slate-500 leading-relaxed">
-        I build backend services and operate systems that run continuously, with attention to deployment stability and long-term maintainability.
-    </p>
-</footer>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="max-w-4xl mx-auto px-8 pb-10 text-xs text-zinc-600">
+    Usman Zahid &middot; Pakistan &middot;
+    <a href="mailto:usmanzahidx03@gmail.com" class="hover:text-zinc-400 transition-colors">usmanzahidx03@gmail.com</a>
+  </footer>
 
 </body>
 </html>
