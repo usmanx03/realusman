@@ -1,120 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <title>Usman Zahid — Backend Engineer</title>
-
-    <meta name="description" content="Backend engineer focused on systems, deployments, and infrastructure."/>
-
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <script type="module" src="assets/js/app.js"></script>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Usman Zahid — Backend Engineer</title>
+  <meta name="description" content="Backend engineer focused on systems, deployments, and infrastructure."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
+<body>
 
-<body class="min-h-screen bg-[#070a13] text-[#e2e8f0]/80 font-[Manrope]">
+<div id="boot-screen">
+  <pre id="boot-log"></pre>
+</div>
 
-<!-- HERO -->
-<header class="relative pt-20 md:pt-28 overflow-hidden select-none">
-
-    <!-- BACKGROUND NAME -->
-    <div class="text-[12vw] font-extrabold tracking-tighter text-[#1e293b]/20 uppercase text-center leading-none whitespace-nowrap font-[Inter]">
-        usman zahid
+<div id="terminal" class="hidden">
+  <div id="output"></div>
+  <div id="input-row">
+    <span id="prompt">usman@portfolio:~$&nbsp;</span>
+    <div id="input-wrapper">
+      <span id="input-display"></span><span id="ghost-text"></span><span id="cursor">█</span>
     </div>
+  </div>
+</div>
 
-    <div class="relative -mt-12 md:-mt-20 max-w-4xl mx-auto px-6">
-
-        <h1 class="text-3xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
-            Backend engineer building <br>
-            <span id="hero-typing-title" class="text-cyan-400 border-r-2 border-cyan-400/60 pr-1 italic">
-          APIs.
-        </span>
-        </h1>
-
-        <p class="mt-6 text-sm md:text-base text-slate-400 leading-relaxed max-w-2xl">
-            I design backend services, manage deployments, and work close to infrastructure.
-            The focus is on systems that behave consistently in production and remain operable over time.
-        </p>
-
-        <div class="mt-7 flex flex-wrap gap-6 text-sm text-slate-300">
-            <a class="hover:text-cyan-400" href="mailto:usmanzahidx03@gmail.com">Email</a>
-            <a class="hover:text-cyan-400" href="https://github.com/usmanzahidcode">GitHub</a>
-            <a class="hover:text-cyan-400" href="https://x.com/UsmanZ_">X</a>
-            <a class="hover:text-cyan-400" href="https://dev.to/">Blog</a>
-            <a class="hover:text-cyan-400" href="https://linkedin.com">LinkedIn</a>
-        </div>
-    </div>
-</header>
-
-<!-- CONTENT (RESTORED BALANCED SPACING) -->
-<main class="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-20">
-
-    <!-- SYSTEMS -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Systems
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I build backend systems for production environments, where reliability and structure matter more than initial implementation speed.
-                Work typically spans APIs, service design, and data flow between components.
-            </p>
-
-            <p>
-                These systems are designed to remain stable under real usage, including handling retries, failures, and consistency across distributed
-                components.
-            </p>
-        </div>
-    </section>
-
-    <!-- DEPLOYMENTS -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Deployments
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I work on deployment pipelines, containerized services, and server-side configuration for production systems.
-            </p>
-
-            <p>
-                Focus is on predictable deployments, repeatable environments, and reducing risk during releases.
-                I also introduce automation where operational steps become repetitive or error-prone.
-            </p>
-        </div>
-    </section>
-
-    <!-- INFRASTRUCTURE -->
-    <section class="space-y-6">
-        <h2 class="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Infrastructure
-        </h2>
-
-        <div class="space-y-5 text-sm md:text-base text-slate-300 leading-relaxed">
-            <p>
-                I work with servers, runtime environments, and system setups when required.
-                This includes service hosting, environment configuration, and operational debugging.
-            </p>
-
-            <p>
-                This exposure helps in designing backend systems that are practical to deploy and maintain outside development environments.
-            </p>
-        </div>
-    </section>
-
-</main>
-
-<!-- FOOTER (balanced + not generic) -->
-<footer class="max-w-4xl mx-auto px-6 pb-14 border-t border-slate-800 pt-8">
-    <p class="text-xs text-slate-500 leading-relaxed">
-        I build backend services and operate systems that run continuously, with attention to deployment stability and long-term maintainability.
-    </p>
-</footer>
-
+<script src="assets/js/app.js" type="module"></script>
 </body>
 </html>
