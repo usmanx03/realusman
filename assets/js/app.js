@@ -1,91 +1,46 @@
 // ── DATA ────────────────────────────────────────────────────────────────────
 
 const SOCIALS = {
-  github:   { url: 'https://github.com/usmanzahidcode',   label: 'GitHub'   },
-  linkedin: { url: 'https://linkedin.com/in/usmanzahid',  label: 'LinkedIn' },
-  x:        { url: 'https://x.com/UsmanZ_',               label: 'X (Twitter)' },
-  twitter:  { url: 'https://x.com/UsmanZ_',               label: 'Twitter'  },
-  email:    { url: 'mailto:usmanzahidx03@gmail.com',      label: 'Email'    },
-  blog:     { url: 'https://dev.to/',                     label: 'Blog (dev.to)' },
+  github:   { url: 'https://github.com/usmanzahidx03',        label: 'GitHub'    },
+  linkedin: { url: 'https://linkedin.com/in/usmanzahidx03',   label: 'LinkedIn'  },
+  x:        { url: 'https://x.com/UsmanZ_',                   label: 'X'         },
+  email:    { url: 'mailto:usmanzahidx03@gmail.com',          label: 'Email'     },
 };
 
 const COMMANDS = {
-  help: {
-    desc: 'list all available commands',
-    usage: 'help',
-  },
-  intro: {
-    desc: 'about me — who I am and what I do',
-    usage: 'intro',
-  },
-  social: {
-    desc: 'open a social profile  (e.g. social github)',
-    usage: 'social [github|linkedin|x|email|blog]',
-  },
-  links: {
-    desc: 'show all links at once',
-    usage: 'links',
-  },
-  whoami: {
-    desc: 'quick one-liner about me',
-    usage: 'whoami',
-  },
-  skills: {
-    desc: 'tech stack and tooling I work with',
-    usage: 'skills',
-  },
-  clear: {
-    desc: 'clear the terminal screen',
-    usage: 'clear',
-  },
-  echo: {
-    desc: 'print text back (just for fun)',
-    usage: 'echo [text]',
-  },
+  help:   { desc: 'list all available commands',                    usage: 'help'               },
+  intro:  { desc: 'about me — who I am and what I do',             usage: 'intro'              },
+  social: { desc: 'show all links, or open one  (e.g. social x)',  usage: 'social [name]'      },
+  whoami: { desc: 'quick one-liner about me',                       usage: 'whoami'             },
+  skills: { desc: 'tech stack and tooling I work with',             usage: 'skills'             },
+  clear:  { desc: 'clear the terminal screen',                      usage: 'clear'              },
+  echo:   { desc: 'print text back',                                usage: 'echo [text]'        },
 };
 
 // ── BOOT SEQUENCE ───────────────────────────────────────────────────────────
 
 const BOOT_LINES = [
-  { text: 'BIOS v2.4.1  —  Usman Portfolio Systems',         delay: 0,    color: 'var(--muted)' },
-  { text: 'Copyright (C) 2024  UZ Labs. All rights reserved.',delay: 80,   color: 'var(--muted)' },
-  { text: '',                                                  delay: 120  },
-  { text: 'Detecting hardware ...',                           delay: 200  },
-  { text: '  CPU : backend-core™  @  2.8 GHz  ×  8',        delay: 320  },
-  { text: '  MEM : 32 GB  (ECC)                    [ OK ]',  delay: 420, color: 'var(--green)' },
-  { text: '  DSK : /dev/sda  512 GB  NVMe           [ OK ]', delay: 520, color: 'var(--green)' },
-  { text: '',                                                  delay: 600  },
-  { text: 'Loading kernel ...',                               delay: 680  },
-  { text: '[    0.000000] Booting Linux kernel 6.8.0-uz',    delay: 780,  color: 'var(--dim)'  },
-  { text: '[    0.184231] ACPI: IRQ0 used by override.',     delay: 860,  color: 'var(--dim)'  },
-  { text: '[    0.312800] PCI: Using configuration type 1',  delay: 920,  color: 'var(--dim)'  },
-  { text: '[    0.561033] NET: Registered PF_INET6 protocol',delay: 980,  color: 'var(--dim)'  },
-  { text: '[    0.702100] io scheduler mq-deadline registered',delay:1040, color: 'var(--dim)' },
-  { text: '[    1.011400] EXT4-fs: mounted filesystem',      delay:1120,  color: 'var(--dim)'  },
-  { text: '',                                                  delay:1200  },
-  { text: 'Starting services ...',                            delay:1280  },
-  { text: '  [  OK  ] Started portfolio.service',            delay:1380,  color: 'var(--green)'},
-  { text: '  [  OK  ] Started ssh.service',                  delay:1460,  color: 'var(--green)'},
-  { text: '  [  OK  ] Started nginx.service',                delay:1540,  color: 'var(--green)'},
-  { text: '  [  OK  ] Reached target multi-user.target',     delay:1660,  color: 'var(--green)'},
-  { text: '',                                                  delay:1740  },
-  { text: 'Ubuntu 24.04.1 LTS  usman-portfolio tty1',        delay:1820  },
-  { text: '',                                                  delay:1860  },
-  { text: 'usman-portfolio login: usman',                    delay:1960  },
-  { text: 'Password: ',                                       delay:2240  },
-  { text: '',                                                  delay:2700  },
-  { text: 'Last login: Fri Jun 27 00:00:00 2025 from 127.0.0.1', delay:2780, color:'var(--muted)'},
-  { text: '',                                                  delay:2900  },
+  { text: 'Ubuntu 24.04.1 LTS  usman-portfolio',              delay: 0    },
+  { text: '',                                                   delay: 80   },
+  { text: '  [  OK  ] Started portfolio.service',             delay: 160,  color: 'var(--green)' },
+  { text: '  [  OK  ] Started nginx.service',                 delay: 280,  color: 'var(--green)' },
+  { text: '  [  OK  ] Reached target multi-user.target',      delay: 400,  color: 'var(--green)' },
+  { text: '',                                                   delay: 500  },
+  { text: 'usman-portfolio login: usman',                     delay: 580  },
+  { text: 'Password: ',                                        delay: 880  },
+  { text: '',                                                   delay: 1200 },
+  { text: 'Last login: Fri Jun 27 00:00:00 2025',             delay: 1280, color: 'var(--muted)' },
+  { text: '',                                                   delay: 1360 },
 ];
 
 // ── DOM REFS ─────────────────────────────────────────────────────────────────
 
-const bootScreen  = document.getElementById('boot-screen');
-const bootLog     = document.getElementById('boot-log');
-const terminal    = document.getElementById('terminal');
-const output      = document.getElementById('output');
+const bootScreen   = document.getElementById('boot-screen');
+const bootLog      = document.getElementById('boot-log');
+const terminal     = document.getElementById('terminal');
+const output       = document.getElementById('output');
 const inputDisplay = document.getElementById('input-display');
-const ghostText   = document.getElementById('ghost-text');
+const ghostText    = document.getElementById('ghost-text');
 
 // ── HELPERS ──────────────────────────────────────────────────────────────────
 
@@ -116,13 +71,11 @@ function getGhost(input) {
   const lower = input.toLowerCase();
   const parts  = lower.split(' ');
 
-  // completing a top-level command
   if (parts.length === 1) {
     const match = Object.keys(COMMANDS).find(c => c.startsWith(lower) && c !== lower);
     return match ? match.slice(lower.length) : '';
   }
 
-  // completing social argument
   if (parts[0] === 'social' && parts.length === 2) {
     const arg = parts[1];
     if (!arg) return '';
@@ -152,23 +105,22 @@ function runHelp() {
 function runIntro() {
   appendBlank();
   appendLine('ascii', [
-    ' _   _                             ______     _     _     _ ',
-    '| | | |                            |___  /    | |   (_)   | |',
-    '| | | |___ _ __ ___   __ _ _ __       / / __ | |__  _  __| |',
-    "| | | / __| '_ ` _ \\ / _` | '_ \\     / / '_ \\| '_ \\| |/ _` |",
-    '| |_| \\__ \\ | | | | | (_| | | | |   / /| | | | | | | | (_| |',
-    " \\___/|___/_| |_| |_|\\__,_|_| |_|  /_/ |_| |_|_| |_|_|\\__,_|",
+    ' _   _                            ______     _     _     _ ',
+    '| | | |___  _ __ ___   __ _ _ __ |___  /    | |   (_)   | |',
+    "| | | / __|| '_ ` _ \\ / _`| '_ \\    / / __ | |__  _  __| |",
+    '| |_| \\__ \\| | | | | | (_|| | | |  / / |_ || |_ || |/ _` |',
+    ' \\___/|___/|_| |_| |_|\\__,||_| |_|/_/  \\__/ |_| ||_|\\__,_|',
   ].join('\n'));
   appendBlank();
   appendLine('line-section', '── about ──');
   appendBlank();
 
   const kvs = [
-    ['name',       'Usman Zahid'],
-    ['role',       'Backend Engineer'],
-    ['location',   'Pakistan 🇵🇰'],
-    ['focus',      'Systems · Deployments · Infrastructure'],
-    ['available',  'Open to opportunities'],
+    ['name',      'Usman Zahid'],
+    ['role',      'Backend Engineer'],
+    ['location',  'Pakistan 🇵🇰'],
+    ['focus',     'Systems · Deployments · Infrastructure'],
+    ['status',    'Open to opportunities'],
   ];
   for (const [k, v] of kvs) {
     const row = el('div', 'kv-row');
@@ -177,23 +129,17 @@ function runIntro() {
   }
 
   appendBlank();
-  appendLine('line-section', '── bio ──');
+  appendLine('line', 'I build backend services that hold up in production — APIs, distributed');
+  appendLine('line', 'systems, deployment pipelines, and the infrastructure underneath them.');
   appendBlank();
-  appendLine('line', 'I build backend services for production environments, where reliability');
-  appendLine('line', 'and structure matter more than speed.  Work typically spans APIs,');
-  appendLine('line', 'service design, and data flow between distributed components.');
-  appendBlank();
-  appendLine('line', 'I also work on deployment pipelines, containerised services, and');
-  appendLine('line', 'server-side config — with a focus on predictable releases and');
-  appendLine('line', 'repeatable environments.');
-  appendBlank();
-  appendLine('line-hint', 'Run `social` to find me online, or `skills` to see my stack.');
+  appendLine('line-hint', 'Try `social`, `skills`, or `help` to explore.');
   appendBlank();
 }
 
 function runWhoami() {
   appendBlank();
-  appendLine('line', 'usman — backend engineer who turns infrastructure into reliable systems.');
+  appendLine('line', 'Backend engineer. I build systems that stay up, scale predictably,');
+  appendLine('line', 'and don\'t require heroics to maintain.');
   appendBlank();
 }
 
@@ -203,12 +149,12 @@ function runSkills() {
   appendBlank();
 
   const cats = [
-    ['languages',    'PHP · Python · JavaScript / TypeScript · Bash'],
-    ['frameworks',   'Laravel · Node.js · Express · FastAPI'],
-    ['databases',    'MySQL · PostgreSQL · Redis · MongoDB'],
-    ['devops',       'Docker · Nginx · GitHub Actions · Linux'],
-    ['cloud',        'DigitalOcean · AWS (EC2, S3, RDS)'],
-    ['tools',        'Git · Composer · REST · WebSockets'],
+    ['languages',   'PHP · JavaScript · Python · .NET'],
+    ['frameworks',  'Laravel · FastAPI'],
+    ['databases',   'PostgreSQL · MySQL · Redis · MongoDB'],
+    ['devops',      'Nginx · GitHub Actions · Linux · Docker'],
+    ['cloud',       'Hetzner · DigitalOcean · AWS'],
+    ['tools',       'PhpStorm · Git · Composer'],
   ];
   for (const [k, v] of cats) {
     const row = el('div', 'kv-row');
@@ -218,35 +164,32 @@ function runSkills() {
   appendBlank();
 }
 
-function runLinks() {
-  appendBlank();
-  appendLine('line-section', '── links ──');
-  appendBlank();
-  for (const [name, { url, label }] of Object.entries(SOCIALS)) {
-    const row = el('div', 'social-row');
-    row.innerHTML = `<span class="social-name">${label}</span><a class="social-url" href="${url}" target="_blank" rel="noopener">${url}</a>`;
-    output.appendChild(row);
-  }
-  appendBlank();
-}
-
 function runSocial(args) {
   const name = args[0]?.toLowerCase();
 
+  // no argument → show all links + usage
   if (!name) {
     appendBlank();
     appendLine('line-hint', 'Usage: social [' + Object.keys(SOCIALS).join('|') + ']');
     appendBlank();
+    appendLine('line-section', '── links ──');
+    appendBlank();
+    for (const [, { url, label }] of Object.entries(SOCIALS)) {
+      const row = el('div', 'social-row');
+      row.innerHTML = `<span class="social-name">${label}</span><a class="social-url" href="${url}" target="_blank" rel="noopener">${url}</a>`;
+      output.appendChild(row);
+    }
+    appendBlank();
     return;
   }
 
-  // fuzzy: find first key that starts with the given prefix
+  // fuzzy match prefix
   const key = Object.keys(SOCIALS).find(k => k.startsWith(name));
 
   if (!key) {
     appendBlank();
     appendLine('line-error', `social: unknown profile "${name}"`);
-    appendLine('line-hint', 'Try: ' + Object.keys(SOCIALS).join(', '));
+    appendLine('line-hint', 'Options: ' + Object.keys(SOCIALS).join(', '));
     appendBlank();
     return;
   }
@@ -290,7 +233,6 @@ function dispatch(raw) {
     case 'intro':  runIntro();       break;
     case 'whoami': runWhoami();      break;
     case 'skills': runSkills();      break;
-    case 'links':  runLinks();       break;
     case 'social': runSocial(args);  break;
     case 'echo':   runEcho(args);    break;
     case 'clear':  runClear();       break;
@@ -338,29 +280,20 @@ document.addEventListener('keydown', (e) => {
 
   if (e.key === 'ArrowUp') {
     e.preventDefault();
-    if (histIdx < history.length - 1) {
-      histIdx++;
-      buffer = history[histIdx];
-      updateDisplay();
-    }
+    if (histIdx < history.length - 1) { histIdx++; buffer = history[histIdx]; updateDisplay(); }
     return;
   }
 
   if (e.key === 'ArrowDown') {
     e.preventDefault();
-    if (histIdx > 0) {
-      histIdx--;
-      buffer = history[histIdx];
-    } else {
-      histIdx = -1;
-      buffer = '';
-    }
+    if (histIdx > 0) { histIdx--; buffer = history[histIdx]; }
+    else { histIdx = -1; buffer = ''; }
     updateDisplay();
     return;
   }
 
-  // ignore modifier-only keys
   if (e.key.length > 1) return;
+
   if (e.ctrlKey || e.metaKey || e.altKey) {
     if (e.ctrlKey && e.key === 'l') { runClear(); return; }
     if (e.ctrlKey && e.key === 'c') { buffer = ''; updateDisplay(); appendLine('line-cmd', '^C'); return; }
@@ -374,27 +307,25 @@ document.addEventListener('keydown', (e) => {
 // ── BOOT ANIMATION ────────────────────────────────────────────────────────────
 
 async function runBoot() {
+  let elapsed = 0;
   for (const line of BOOT_LINES) {
-    await new Promise(r => setTimeout(r, line.delay ? 0 : 0));
+    const wait = (line.delay ?? 80) - elapsed;
+    if (wait > 0) await new Promise(r => setTimeout(r, wait));
+    elapsed = line.delay ?? 80;
 
     const span = document.createElement('span');
     if (line.color) span.style.color = line.color;
     span.textContent = line.text + '\n';
     bootLog.appendChild(span);
     bootScreen.scrollTop = bootScreen.scrollHeight;
-
-    // stagger each line
-    await new Promise(r => setTimeout(r, line.delay ?? 60));
   }
 
-  // fade out boot screen
   await new Promise(r => setTimeout(r, 300));
   bootScreen.style.transition = 'opacity 0.5s ease';
   bootScreen.style.opacity = '0';
   await new Promise(r => setTimeout(r, 500));
   bootScreen.style.display = 'none';
 
-  // show terminal
   terminal.classList.remove('hidden');
   runIntro();
   scrollBottom();
