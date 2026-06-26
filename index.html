@@ -3,26 +3,313 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Usman Zahid — Backend Engineer</title>
-  <meta name="description" content="Backend engineer focused on systems, deployments, and infrastructure."/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <title>Usman Zahid</title>
+  <meta name="description" content="Backend engineer. I build APIs, servers, and production systems — full solutions, not just code."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #09090b;
+      --surface:  #111115;
+      --border:   #1f1f27;
+      --text:     #d4d4d8;
+      --muted:    #71717a;
+      --accent:   #22d3ee;
+      --white:    #f4f4f5;
+      --link:     #60a5fa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-name {
+      font-weight: 600;
+      color: var(--white);
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 14px;
+      color: var(--muted);
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--white); text-decoration: none; }
+
+    .nav-terminal {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--accent) !important;
+      border: 1px solid var(--accent);
+      padding: 3px 10px;
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s !important;
+    }
+    .nav-terminal:hover {
+      background: var(--accent);
+      color: var(--bg) !important;
+      text-decoration: none !important;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: var(--text);
+      max-width: 580px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      margin-top: 1.75rem;
+      font-size: 14px;
+    }
+
+    .hero-links a {
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+    .hero-links a:hover { color: var(--white); text-decoration: none; }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    /* stack list */
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .stack-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      nav { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .nav-links { gap: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-<div id="boot-screen">
-  <pre id="boot-log"></pre>
-</div>
+<nav>
+  <span class="nav-name">Usman Zahid</span>
+  <ul class="nav-links">
+    <li><a class="nav-terminal" href="terminal.html">~/terminal</a></li>
+  </ul>
+</nav>
 
-<div id="terminal" class="hidden">
-  <div id="output"></div>
-  <div id="input-row">
-    <span id="prompt">usman@portfolio:~$&nbsp;</span>
-    <div id="input-wrapper">
-      <span id="input-display"></span><span id="cursor">█</span><span id="ghost-text"></span>
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Backend engineer.<br><span>Solution builder.</span></h1>
+
+    <p>
+      I am Usman Zahid, a backend engineer based in Pakistan. I build production systems
+      from scratch: APIs, servers, deployments, and the infrastructure underneath them.
+    </p>
+
+    <p>
+      I do not just write code for a ticket. I understand the problem, design the system,
+      ship it, and keep it running in production. Full solutions, not just a pair of hands.
+    </p>
+
+    <div class="hero-links">
+      <a href="https://github.com/usmanzahidx03" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/usmanzahidx03" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/UsmanZ_" target="_blank" rel="noopener">X</a>
+      <a href="mailto:usmanzahidx03@gmail.com">usmanzahidx03@gmail.com</a>
     </div>
   </div>
-</div>
 
-<script src="assets/js/app.js" type="module"></script>
+  <!-- WHAT I DO -->
+  <section>
+    <h2>What I do</h2>
+
+    <p>
+      I build backend systems that handle real traffic, survive incidents, and stay
+      maintainable long after the initial launch. That means API design, service
+      architecture, and the data pipelines connecting them.
+    </p>
+
+    <p>
+      I own deployments too. Containerising services, writing pipelines, configuring servers,
+      making sure a release is a non-event. Predictable over heroic.
+    </p>
+
+    <p>
+      When a project calls for it, I extend into the frontend. Enough to ship a complete
+      product, not just hand off a JSON response and consider the job done.
+    </p>
+  </section>
+
+  <!-- HOW I THINK -->
+  <section>
+    <h2>How I think</h2>
+
+    <p>
+      Good backend work is invisible. The API responds fast, the data is consistent, the
+      service recovers from failure without waking anyone up. That is what I build toward.
+    </p>
+
+    <p>
+      I think in systems: how components interact, where bottlenecks form, what breaks under
+      load. If something is hard to debug in production, it is not finished yet.
+    </p>
+
+    <p>
+      I reach for boring technology that works rather than clever technology that surprises.
+      One well-understood solution beats five that each handle a piece of the problem.
+    </p>
+  </section>
+
+  <!-- STACK -->
+  <section>
+    <h2>Stack</h2>
+
+    <p>
+      The tools change with the job. These are the ones I reach for most.
+    </p>
+
+    <div class="stack">
+      <span class="stack-tag">PHP</span>
+      <span class="stack-tag">Laravel</span>
+      <span class="stack-tag">Python</span>
+      <span class="stack-tag">FastAPI</span>
+      <span class="stack-tag">JavaScript</span>
+      <span class="stack-tag">.NET</span>
+      <span class="stack-tag">PostgreSQL</span>
+      <span class="stack-tag">MySQL</span>
+      <span class="stack-tag">Redis</span>
+      <span class="stack-tag">MongoDB</span>
+      <span class="stack-tag">Docker</span>
+      <span class="stack-tag">Nginx</span>
+      <span class="stack-tag">Linux</span>
+      <span class="stack-tag">GitHub Actions</span>
+      <span class="stack-tag">Hetzner</span>
+      <span class="stack-tag">DigitalOcean</span>
+      <span class="stack-tag">AWS</span>
+    </div>
+  </section>
+
+  <!-- CURRENTLY -->
+  <section>
+    <h2>Currently</h2>
+
+    <p>
+      Open to backend engineering roles and consulting work — particularly systems that need
+      serious production thinking, not just feature velocity.
+    </p>
+
+    <p>
+      If you are building something real and need an engineer who can own the backend end-to-end,
+      <a href="mailto:usmanzahidx03@gmail.com">reach out</a>.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Usman Zahid &mdash; Pakistan &mdash; <a href="mailto:usmanzahidx03@gmail.com">usmanzahidx03@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
